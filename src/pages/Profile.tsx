@@ -9,23 +9,31 @@ import {
   Badge,
   Separator,
 } from "@radix-ui/themes";
-
+import { FcLike } from "react-icons/fc";
+import { FcReading } from "react-icons/fc";
+import { FcServices } from "react-icons/fc";
+import { FcBusinesswoman } from "react-icons/fc";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { FaLine } from "react-icons/fa";
 function Profile() {
   return (
     <Container size="3" py="6">
-      <Card>
-        {/* Header Section */}
+      <Card className="bg-[#D9C68F]">
         <Flex direction="column" gap="4">
           <Flex align="center" gap="4">
             <Avatar
               size="8"
               radius="full"
-              fallback="SP"
+              fallback=""
               color="blue"
+              src="01.jpg"
             />
             <Box>
-              <Heading size="7">สนานุ จินดาวรรณกุล</Heading>
-              <Text size="3" color="gray">
+              <Heading size="7" color="indigo">
+                Natthaya Decha
+              </Heading>
+              <Text size="3" className="text-[#6C1A12]">
                 นักศึกษาวิศวกรรมคอมพิวเตอร์
               </Text>
             </Box>
@@ -33,57 +41,79 @@ function Profile() {
 
           <Separator size="4" />
 
-          {/* About Me Section */}
           <Box>
-            <Heading size="5" mb="3">
-              เกี่ยวกับฉัน
+            <Heading
+              size="5"
+              mb="3"
+              className="text-[#6C1A12] flex items-center gap-2 "
+            >
+              <FcLike />
+              About me
             </Heading>
             <Text>
-              สวัสดีครับ ผมชื่อสนานุ จินดาวรรณกุล เป็นนักศึกษาที่มีความสนใจในด้าน
-              การพัฒนาเว็บไซต์และเทคโนโลยีสมัยใหม่ ชอบเรียนรู้สิ่งใหม่ ๆ
-              และพัฒนาทักษะการเขียนโปรแกรมอยู่เสมอ
+              ฉันชื่อนางสาว ณัฐธยา เดชา เป็นนักศึกษาวิทยาลัยวิศกรรมศาสตร์เละเทคโนโลยี
+              สาขาวิศวกรรมคอมพิวเตอร์ มีความสนใจในด้านการพัฒนาเว็บไซต์
+              fronend Blackend และเทคโนโลยีเว็บใหม่ๆตั้งใจพัฒนาทักษะของตนเองเพื่อก้าวไปเป็นนักพัฒนาซอฟต์แวร์ที่สามารถสร้างประสบการณ์ต่อตัวฉันได้
             </Text>
+          </Box>
+             <Separator size="4" />
+          <Box>
+            <Heading size="5" mb="3" className="text-[#6C1A12] flex items-center gap-2">
+              <FcBusinesswoman />
+              Contact Me
+            </Heading>        
+              <Text className="flex items-center gap-2">
+                <MdEmail color="red"/>Natthaya2546@gmail.com
+                <FaLine  color="green"/>Nathhya2546
+                <BsFillTelephoneFill color="brown" />096-932-3609
+
+              </Text>
           </Box>
 
           <Separator size="4" />
 
-          {/* Education Section */}
           <Box>
-            <Heading size="5" mb="3">
-              การศึกษา
+            <Heading
+              size="5"
+              mb="3"
+              className="text-[#6C1A12] flex items-center gap-2 ">
+              <FcReading />
+              My Learning Journey
             </Heading>
             <Card mb="3">
               <Flex direction="column" gap="2">
-                <Heading size="4">ปริญญาตรี วิศวกรรมศาสตร์บัณฑิต</Heading>
-                <Text color="gray">
-                  สาขาวิศวกรรมคอมพิวเตอร์
-                </Text>
-                <Text color="gray">
-                  มหาวิทยาลัยศรีนครินทรวิโรฒ
-                </Text>
-                <Text size="2" color="gray">
-                  2566 - ปัจจุบัน
+                <Heading size="4">Bachelor’s Degree - Computer Engineering </Heading>
+                <Text >Dhurakij Pundit University</Text>
+                <Text size="2">
+                  2023 – Present
                 </Text>
               </Flex>
             </Card>
           </Box>
 
           <Separator size="4" />
-
-          {/* Skills Section */}
           <Box>
-            <Heading size="5" mb="3">
-              ทักษะและความสามารถ
+            <Heading size="5" mb="3" className="text-[#6C1A12] flex items-center gap-2">
+              <FcServices />
+              Soft Skills
             </Heading>
             <Flex gap="2" wrap="wrap">
-              <Badge size="2" color="blue">HTML/CSS</Badge>
-              <Badge size="2" color="green">JavaScript</Badge>
-              <Badge size="2" color="purple">TypeScript</Badge>
-              <Badge size="2" color="orange">React</Badge>
-              <Badge size="2" color="red">Node.js</Badge>
-              <Badge size="2" color="cyan">Git/GitHub</Badge>
-              <Badge size="2" color="pink">Tailwind CSS</Badge>
-              <Badge size="2" color="indigo">Radix UI</Badge>
+              <Badge size="2" color="blue">
+                Frontend:HTML/CSS · JavaScript · TypeScript · React · Tailwind CSS
+              </Badge>
+              <Badge size="2" color="green">
+                Backend: Node.js
+              </Badge>
+              <Badge size="2" color="gray">
+                Tools: Git/GitHub · Radix UI
+              </Badge>
+
+              <Badge size="2" color="sky">
+                Communication
+              </Badge>
+              <Badge size="2" color="teal">
+                Creativity
+              </Badge>
             </Flex>
           </Box>
         </Flex>
