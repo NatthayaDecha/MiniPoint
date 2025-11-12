@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Text, Card, Flex,Badge } from "@radix-ui/themes";
-import { IoSunnyOutline } from "react-icons/io5";
+
 import { FcBusinesswoman } from "react-icons/fc";
 import { FcSettings } from "react-icons/fc";
 
@@ -11,9 +11,7 @@ function Home() {
           size="7"
           mb="4"
           color="indigo"
-          className="flex items-center gap-2 "
         >
-          <IoSunnyOutline />
           Come and explore my world of creativity
         </Heading>
 
